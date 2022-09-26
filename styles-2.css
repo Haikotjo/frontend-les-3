@@ -4,20 +4,21 @@
     box-sizing: border-box;
 }
 
-/*
-Paars #5722CD;
-Blauw #4845E4;
-Roze #ED4385;
-Zwart #0C0C0C (voor standaard tekst);
-Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
-Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
-Grijs #7A7A7A (voor de service-tegel tekst);
- */
+:root {
+    --main-bg-color-purple: #5722CD;
+    --alternative-bg-color-light-grey: #F3F6F9 ;
+    --main-text-color-black: #0C0C0C;
+    --elemnt-tcolor-color-pink: #ED4385;;
+    --random-color-blue: #4845E4;
+    --alternative-text-color-light-pink:#F2F0FF;
+    --tyle-color-gray: #7A7A7A ;
+
+}
 
 /* ------------------------------- Typography ----------------------------------- */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #0C0C0C;
+    color: var(--main-text-color-black);
 }
 
 h1, h2, h3, h4 {
@@ -66,7 +67,7 @@ nav {
     justify-content: center;
     padding-top: 20px;
     padding-right: 20px;
-    background-color: #5722CD;
+    background-color: var(--main-bg-color-purple);
 }
 
 .navigation-menu {
@@ -85,11 +86,11 @@ nav {
 header {
     display: flex;
     flex-direction: row;
-    background-color: #5722CD;
+    background-color: var(--main-bg-color-purple);
     justify-content: center;
     padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 50px;
+    padding-bottom: 130px;
+    position: relative;
 }
 
 .header-h1 {
@@ -104,7 +105,7 @@ header {
 }
 
 .header-button {
-    background-color: #ED4385;
+    background-color: var(--elemnt-tcolor-color-pink);
     border: none;
     color: #F2F0FF;
     padding-right: 20px;
@@ -112,6 +113,16 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 25px;
+    box-shadow: 0px 3px 3px var(--main-text-color-black);
+    margin-bottom: 25px;
+    font-variant-caps: all-petite-caps;
+}
+
+.squiggle-line-top {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    bottom: 0;
 }
 
 /* ---------------Introduction ------------------- */
@@ -128,9 +139,11 @@ header {
 .article-section {
     display: flex;
     flex-direction: column;
-    background-color: #F3F6F9;
+    background-color: var(--alternative-bg-color-light-grey);
     padding-bottom: 50px;
 }
+
+
 
 .inner-container-article-large {
     display: flex;
@@ -145,9 +158,9 @@ header {
     flex-basis: 800px;
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 600px;
+    flex-basis: 400px;
     margin: 25px;
-    box-shadow: 5px 10px 8px #7A7A7A;
+    box-shadow: 5px 10px 8px var(--tyle-color-gray);
 }
 
 .artilce-row {
@@ -168,6 +181,7 @@ header {
     padding: 10px 10px 10px 10px;
     max-width: 300px;
     min-width: 230px;
+    flex-shrink: 0;
 }
 
 .reverse {
@@ -199,34 +213,35 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-basis: 1200px;
+    flex-basis: 1600px;
     flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
 }
 
 .article-small {
     display: flex;
     flex-direction: column;
     padding: 20px 20px;
-    flex-basis: 350px;
+    flex-basis: 400px;
     margin: 25px;
     border-style: solid;
-    border-color: #5722CD;
-    box-shadow: 5px 10px 8px #7A7A7A;
-
+    border-color: var(--main-bg-color-purple);
+    box-shadow: 5px 10px 8px var(--tyle-color-gray);
+    flex-grow: 1;
+    flex-shrink: 1;
+    box-sizing: border-box;
 }
 
 .article-small h3 {
-    color: #5722CD;
+    color: var(--main-bg-color-purple);
     margin-bottom: 25px;
     margin-right: 10px;
     margin-left: 10px;
 }
 
 .article-small p {
-    color: #5722CD;
-    margin-bottom: 25px;
-    margin-right: 10px;
-    margin-left: 10px;
+    color: var(--main-bg-color-purple);
 }
 
 .image-small-article {
@@ -240,24 +255,24 @@ header {
 .form-bg {
     display: flex;
     flex-direction: row;
-    background-color: #5722CD;
+    background-color: var(--main-bg-color-purple);
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .form-bg h1 {
-    color: #F3F6F9;
+    color: var(--alternative-text-color-light-pink);
     margin-bottom: 25px;
 }
 
 .form-bg p {
-    color: #F3F6F9;
+    color: var(--alternative-text-color-light-pink);
     margin-bottom: 25px;
 }
 
 form {
-    color: #F3F6F9;
+    color: var(--alternative-text-color-light-pink);;
 }
 
 form {
@@ -266,36 +281,39 @@ form {
 }
 
 input[type=button] {
-    background-color: #ED4385;
+    background-color: var(--elemnt-tcolor-color-pink);
     border: none;
-    color: #F2F0FF;
+    color: var(--alternative-text-color-light-pink);
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 25px;
+    box-shadow: 0px 3px 3px var(--main-text-color-black);
+    font-variant-caps: all-petite-caps;
+    width: 50%;
+    margin-left: 75px;
 }
 
-.message {
-    min-height: 300px;
-    min-width: 400px;
+textarea {
+    margin-bottom: 25px;
 }
 
 .article-small p {
-    color: #7A7A7A;
+    color: var(--tyle-color-gray);
 }
 
 /* ------------------------------- Footer --------------------------------------- */
 
 footer {
-    background-color: #0C0C0C;
+    background-color: var(--main-text-color-black);
     padding-bottom: 10px;
     padding-top: 10px;
 }
 footer p {
     display: flex;
     justify-content: center;
-    color: #F3F6F9;
+    color: var(--alternative-text-color-light-pink);
     font-size: small;
 }
 

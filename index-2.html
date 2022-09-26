@@ -18,9 +18,9 @@
 
     <nav>
         <div class="navigation-menu">
-            <a class="navigation link-removal" href="http://">Contact U</a>
-            <a class="navigation link-removal" href="http://">Services</a>
-            <a class="navigation link-removal" href="http://">Case Studies</a>
+            <a class="navigation link-removal" href="#contact-us">Contact Us</a>
+            <a class="navigation link-removal" href="#service">Services</a>
+            <a class="navigation link-removal" href="#case-studies">Case Studies</a>
         </div>
     </nav>
 
@@ -28,7 +28,8 @@
         <div class="inner-container">
                 <h1 class="header-h1">Your website is an investment in the success of your business.</h1>
                  <h3 class="header-p">We are here to help you succeed.</h3>
-                <button class="header-button">Let's work together</button>
+                <button class="header-button">let's work together</button>
+            <img class="squiggle-line-top" src="./assets/squiggle_line_stripe.svg">
         </div>
     </header>
 
@@ -48,7 +49,7 @@
 <!------------------------------------- Articles --------------------------------------------------->
 
 <section class="article-section">
-    <article class="outer-container">
+    <article class="outer-container" id="case-studies">
         <div class="inner-container-article-large">
             <div class="artilce-row">
                 <div class="article-text">
@@ -103,7 +104,7 @@
 <!------------------------------------- Articles Small --------------------------------------------------->
 
 <section class="outer-container">
-    <section class="inner-container small-article">
+    <section id="service" class="inner-container small-article">
 
         <article class="article-small">
             <img class="image-small-article" src="./assets/icon_web-design.svg">
@@ -149,15 +150,16 @@
 <section class="form-bg">
     <div class="inner-container">
         <h1>Let's Work together</h1>
-        <p>Have a question? Need a quote? let us know!</p>
+        <p id="contact-us">Have a question? Need a quote? let us know!</p>
         <form>
 
             <label for="name">Name:</label> <br>
             <input type="text" id="name" value="Name"> <br>
             <label for="mail">Email:</label> <br>
             <input type="email" name="mail" id="mail" value="Email"><br>
-            <label for="mail">Message:</label> <br>
-            <input class="message" type="text" name="message" id="message" value="Message" width="100" height="100"><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"
+                      rows="10" cols="40">message</textarea>
             <input type="button" onclick="alert('Hello World!')" value=" Send">
 
         </form>
